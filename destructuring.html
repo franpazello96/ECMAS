@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <script>
+        //destructuring 
+
+        //tira valores de dentro da estrutura 
+
+        //arrays 
+        let frutas = Array('abacaxi', 'uva', 'pera', 'mamao','melao')
+        
+        //let a = frutas[0]
+
+        //const cria uma constante 
+
+        // let [a, b, ,c] = frutas //pular um índice 
+
+        let [a,b,c,d,e = 'banana'] = frutas // pode colcar banana como padrao caso seja indefinido o valor
+
+     //  console.log(a,b,c,d,e)
+
+     let coisas = [['abacaxi', 'uva', 'pera', 'mamao','melao'], ['jose', 'Maria']]
+
+     let [,[,n2]] = coisas
+    // console.log(n2)  
+     
+     let [[,,x]] = coisas
+    // console.log(x)
+
+     // objetos 
+    let produto = {
+        descricao: 'notebook',
+        preco: 1800,
+        detalhes:{ // composicao é um / tem um 
+            fabricante: 'abc',
+            modelo: 'xyz'
+        }
+    }
+    //  token = array [] para objeto {}
+    //let {descricao, preco} = produto
+
+   // let {descricao: des, preco: p, desconto} = produto
+
+   // let {descricao: des, preco: p = 1000, desconto=5} = produto
+
+   let {detalhes:{fabricante, modelo}} = produto
+    console.log(fabricante, modelo)
+
+    
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS</title>
+    </head>
+    <script>
+        //atraves do padrao de projeto factory nos podemos 
+        // implementar uma fabrica para criacao dos nossos objetos 
+        // em tempo de execucao 
+
+        //colecao de bicicletas 
+        
+      
+        // 
+
+
+        let Bicicleta1 = {
+            cor: 'branca',
+            marcha: 'única',
+            aro: 12,
+            pedalar() {console.log('metodo pedalar')}
+        }
+
+        let Bicicleta2 = {
+            cor: 'vermelha',
+            marcha: 'única',
+            aro: 18,
+            pedalar() {console.log('metodo pedalar')}
+        }  
+        
+        //--------------------------------------------
+        let BicicletaFactory = function(cor, marcha, aro){
+            //logica 
+             //requisicao http 
+             //resposta http 
+            return{
+                cor,
+                marcha,
+                aro,
+                pedalar() {console.log('metodo pedalar')}
+            }
+        }
+        
+        let bicicleta3 = BicicletaFactory('vermelha', '18', 26)
+        bicicleta3.pedalar()
+
+
+    </script>
+
+    <body>
+    </body>
+</html>

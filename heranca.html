@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <script>
+//--------------Heranca Orientacao a objeeto-----------------
+
+
+    class Animal {
+        constructor(){
+            this.cor = ''
+            this.tamanho = null 
+        }
+        dormir(){
+            console.log('dormir')
+        }
+    }
+
+    
+    class Cachorro extends Animal {
+        constructor(){
+            super()
+           // this.cor = 'branco'
+           // this.tamanho = 30
+            this.orelhas = 'grandes e caídas'
+        }
+
+        correr(){
+            console.log('correr')
+        }
+
+        //dormir(){
+        //    console.log('dormir')
+       // }
+
+        rosnar(){
+            console.log('rosnar')
+        }
+    }
+
+    class Passaro extends Animal{
+        constructor(){
+            super()
+            //this.cor = 'branco'
+            //this.tamanho = 10
+            this.bico = 'curto'
+        }
+
+        voar(){
+            console.log('voar')
+        }
+
+        //dormir(){
+        //    console.log('dormir')
+       //}
+    }
+
+    class Papagaio extends Passaro{
+        constructor(){
+            super()
+           // this.cor = 'verde'
+           // this.tamanho = 20
+           // this.bico = 'medio'
+            this.sabeFalar = true
+        }
+
+        falar(){
+            console.log('falar')
+        }
+    }
+
+    let cachorro = new Cachorro()
+    let passaro = new Passaro()
+    let papagaio = new Papagaio()
+
+    console.log(cachorro)
+    console.log(passaro)
+
+    papagaio.dormir()
+    papagaio.falar()
+    papagaio.voar()
+    cachorro.dormir()
+    passaro.dormir()
+
+
+//-------------------------------------------------------
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

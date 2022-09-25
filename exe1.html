@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <script>
+//--------------Orientacao a objeeto-----------------
+        // criando o objeto sofa 
+
+        class Sofa {
+            constructor(cor, qtde_lugares, reclinavel){
+                this.cor = cor
+                this.qtdeLugares = qtde_lugares
+                this.reclinavel = reclinavel
+            }
+
+            reclinarSofa(){
+                if(this.reclinavel === true){
+                    console.log('Sofá reclinavel')
+                }else{
+                    console.log('Sofá não reclinavel')
+                }
+            }
+        }
+
+        let adicionarSofa = Array()
+
+        adicionarSofa.push( new Sofa ('azul', 3, true))
+        console.log(adicionarSofa)
+
+//-------------------------------------------------------
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

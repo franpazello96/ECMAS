@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+ /*      // um softaware de marcenaria 
+        // cadeira e sofa 
+
+        //paradigma procedural
+        
+        // array de cadeiras 
+        let cadeiras = Array()
+
+        cadeiras[0] = Array()
+        cadeiras[0]['qtde_pernas'] = 4
+        cadeiras[0]['giratoria'] = false 
+        cadeiras[0]['cor'] = 'azul'
+
+        cadeiras[1] = Array()
+        cadeiras[1]['qtde_pernas'] = 1
+        cadeiras[1]['giratoria'] = true 
+        cadeiras[1]['cor'] = 'vermelha'
+
+
+        function girar_cadeira(indice){
+            if(cadeiras[indice]['giratoria'] === true){
+                console.log('girou')
+            }else{
+                console.log('cadeira não é giratória')
+            }
+        }
+        
+
+        function adicionar_cadeira(qtde_pernas, giratoria, cor){
+            let novaCadeira = Array()
+            novaCadeira['qtde_pernas'] = qtde_pernas
+            novaCadeira['giratoria'] = giratoria
+            novaCadeira['cor'] = cor
+
+            cadeiras.push(novaCadeira)
+        }
+
+        adicionar_cadeira(3, false, 'verde')
+
+        console.log(cadeiras)
+*/
+//--------------Orientacao a objeeto-----------------
+
+        class Cadeiras{
+            constructor(qtde_pernas, giratoria, cor){
+                this.qtde_pernas = qtde_pernas
+                this.giratoria = giratoria
+                this.cor = cor
+            }
+
+            girarCadeira(){
+                if(this.giratoria === true){
+                    console.log('girou')
+                }else{
+                    console.log('cadeira não é giratória')
+                }
+            }
+        }
+
+        let adicionarCadeira = Array()
+
+        adicionarCadeira.push(new Cadeiras(4, false, 'azul'))
+        adicionarCadeira.push(new Cadeiras(1, true, 'verde'))
+
+        console.log(adicionarCadeira)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

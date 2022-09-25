@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<script>
+    //--------------Heranca Orientacao a objeeto-----------------
+    
+    
+        class Animal {
+            constructor(cor, tamanho, peso){
+                this.cor = cor
+                this.tamanho = tamanho 
+                this.peso = peso
+            }
+            dormir(){
+                console.log('dormir')
+            }
+        }
+    
+    
+        class Passaro extends Animal{
+            constructor(bico, cor, tamanho, peso){
+                super(cor, tamanho, peso)
+                //this.cor = 'branco'
+                //this.tamanho = 10
+                this.bico = bico
+            }
+    
+            voar(){
+                console.log('voar')
+            }
+    
+            //dormir(){
+            //    console.log('dormir')
+           //}
+        }
+    
+        class Papagaio extends Passaro{
+            constructor(sabeFalar, cor, tamanho, peso){
+                super('Medio', cor, tamanho, peso)
+               // this.cor = 'verde'
+               // this.tamanho = 20
+               // this.bico = 'medio'
+                this.sabeFalar = sabeFalar
+            }
+    
+            falar(){
+                console.log('falar')
+            }
+        }
+    
+        let papagaio = new Papagaio(true, 'verde', 25, 350)
+        let papagaio2 = new Papagaio(false, 'branco', 25, 80)
+
+        console.log(papagaio)
+        console.log(papagaio2)
+    
+    //-------------------------------------------------------
+        </script>
+
+<body>
+    
+</body>
+</html>
